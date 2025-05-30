@@ -16,7 +16,11 @@ vector<int> dx = {-1,0,1,0};
 vector<int> dy = {0,1,0,-1};
 #define MOD 1000000007
 
-
+struct TreeNode {
+     int val;
+     TreeNode *left;
+    TreeNode *right;
+};
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -28,7 +32,6 @@ vector<int> dy = {0,1,0,-1};
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-using ll = long long;
 class Solution {
 pair<ll,pair<ll,ll>> solve(TreeNode *root,ll &maxim){   // {sum,{minVal,maxVal}};
     if(!root) return {0,{INT_MAX,INT_MIN}};
